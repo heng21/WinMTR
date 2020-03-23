@@ -1,0 +1,315 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_RCMENU MENU
+BEGIN
+    POPUP "MENU"
+    BEGIN
+        MENUITEM "Copy IP",                     ID_MENU_COPYIP
+        MENUITEM "IPIP.NET",                    ID_MENU_IPIP
+        MENUITEM "Whois",                       ID_MENU_WHOIS
+    END
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 英语(美国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "WinMTR.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_WINMTR_DIALOG DIALOGEX 0, 0, 389, 194
+STYLE DS_SETFONT | DS_3DLOOK | DS_CENTER | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+FONT 9, "Microsoft YaHei", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&Start",ID_RESTART,203,12,50,14,BS_FLAT
+    PUSHBUTTON      "Options",ID_OPTIONS,270,12,51,14,BS_FLAT
+    PUSHBUTTON      "Exit",IDCANCEL,328,12,49,14,BS_FLAT
+    PUSHBUTTON      "Copy Text to clipboard",ID_CTTC,14,39,89,14,BS_FLAT
+    PUSHBUTTON      "Copy HTML to clipboard",ID_CHTC,113,39,89,14,BS_FLAT
+    PUSHBUTTON      "Export TEXT",ID_EXPT,270,39,51,14,BS_FLAT
+    PUSHBUTTON      "Export HTML",ID_EXPH,328,39,49,14,BS_FLAT
+    CONTROL         "List1",IDC_LIST_MTR,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,60,376,126
+    LTEXT           "Host:",IDC_STATIC,13,12,20,13,SS_CENTERIMAGE
+    GROUPBOX        "",IDC_STATIC,7,3,251,29,BS_FLAT
+    GROUPBOX        "",IDC_STATICS,263,3,120,29,BS_FLAT
+    GROUPBOX        "",IDC_STATICJ,7,31,376,26,BS_FLAT
+    COMBOBOX        IDC_COMBO_HOST,35,12,164,73,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOG_OPTIONS DIALOGEX 0, 0, 251, 140
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Options"
+FONT 9, "Microsoft YaHei", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,46,111,50,14,BS_FLAT
+    PUSHBUTTON      "&Cancel",IDCANCEL,137,111,50,14,BS_FLAT
+    ICON            IDR_MAINFRAME,IDC_STATIC,77,14,18,15
+    LTEXT           "Interval (sec):",IDC_STATIC,14,51,45,10,NOT WS_GROUP
+    EDITTEXT        IDC_EDIT_INTERVAL,70,48,34,13,ES_AUTOHSCROLL
+    LTEXT           "Ping size (bytes):",IDC_STATIC,135,48,65,10,NOT WS_GROUP
+    EDITTEXT        IDC_EDIT_SIZE,194,47,34,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Display IP address information",IDC_CHECK_DNS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,63,94,113,9
+    GROUPBOX        "",IDC_STATIC,7,7,237,29,BS_FLAT
+    CTEXT           "WinMTR v1.0.0",IDC_STATIC,99,14,76,17,SS_CENTERIMAGE
+    LTEXT           "Max. hosts in LRU list:",IDC_STATIC,14,75,74,10,NOT WS_GROUP
+    EDITTEXT        IDC_EDIT_MAX_LRU,91,72,34,13,ES_AUTOHSCROLL
+    LTEXT           "Countsize:",IDC_STATIC,135,74,55,10,NOT WS_GROUP
+    EDITTEXT        IDC_EDIT_COUNTSIZE,192,72,34,13,ES_AUTOHSCROLL | ES_NUMBER
+END
+
+IDD_DIALOG_PROPERTIES DIALOGEX 0, 0, 201, 159
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Host properties"
+FONT 9, "Microsoft YaHei", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,71,138,50,14,BS_FLAT
+    LTEXT           "Information:",IDC_STATIC,15,18,42,8
+    EDITTEXT        IDC_EDIT_PHOST,59,16,125,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "IP Address:",IDC_STATIC,14,32,40,9
+    EDITTEXT        IDC_EDIT_PIP,58,31,126,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "Packets",IDC_STATIC,7,74,89,60,BS_FLAT
+    GROUPBOX        "Ping time",IDC_STATIC,108,74,86,60,BS_FLAT
+    GROUPBOX        "Host",IDC_STATIC,7,7,187,62,BS_FLAT
+    LTEXT           "Loss (%):",IDC_STATIC,13,117,31,9
+    LTEXT           "Received:",IDC_STATIC,13,101,36,9
+    LTEXT           "Sent:",IDC_STATIC,13,85,21,9
+    LTEXT           "Last:",IDC_STATIC,114,84,18,9
+    LTEXT           "Best:",IDC_STATIC,114,96,20,8
+    LTEXT           "Average:",IDC_STATIC,114,107,32,8
+    LTEXT           "Worst:",IDC_STATIC,114,118,23,8
+    EDITTEXT        IDC_EDIT_PSENT,53,82,35,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    EDITTEXT        IDC_EDIT_PRECV,53,99,35,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    EDITTEXT        IDC_EDIT_PLOSS,53,116,35,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    EDITTEXT        IDC_EDIT_PLAST,150,81,34,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_PBEST,150,94,34,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_PAVRG,150,106,34,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_PWORST,150,118,34,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_PCOMMENT,14,50,170,12,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_DIALOG_HELP DIALOGEX 0, 0, 192, 149
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "WinMTR"
+FONT 9, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,74,126,44,15
+    LTEXT           "WinMTR 1.0.0",IDC_STATIC,74,8,53,14,SS_CENTERIMAGE
+    LTEXT           "Usage: WinMTR [options] target_host_name",IDC_STATIC,5,27,127,9
+    LTEXT           "Options:",IDC_STATIC,5,39,37,9
+    LTEXT           "     --interval, -i VALUE. Set ping interval.",IDC_STATIC,22,48,164,12
+    LTEXT           "     --size, -s VALUE. Set ping size.",IDC_STATIC,22,60,159,12
+    LTEXT           "     --maxLRU, -m VALUE. Set max hosts in LRU list.",IDC_STATIC,21,72,171,12
+    LTEXT           "     --help, -h. Print this help.",IDC_STATIC,22,94,133,8
+    LTEXT           "     --numeric, -n. Do not resolve names.",IDC_STATIC,22,84,164,12
+    LTEXT           "     --count, -c. Set ping count.",IDC_STATIC,21,106,115,9
+    ICON            IDR_MAINFRAME,IDC_STATIC,46,5,20,20
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "WinMTR"
+            VALUE "FileVersion", "1.0.0.0"
+            VALUE "InternalName", "WinMTR"
+            VALUE "LegalCopyright", "WinMTR 1.0 (c) "
+            VALUE "OriginalFilename", "WinMTR.EXE"
+            VALUE "ProductName", "WinMTR Application"
+            VALUE "ProductVersion", "1.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_WINMTR_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 222
+        VERTGUIDE, 270
+        VERTGUIDE, 321
+        VERTGUIDE, 328
+        VERTGUIDE, 377
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 40
+        HORZGUIDE, 12
+        HORZGUIDE, 39
+    END
+
+    IDD_DIALOG_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 244
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 133
+    END
+
+    IDD_DIALOG_PROPERTIES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 194
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 152
+    END
+
+    IDD_DIALOG_HELP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 188
+        VERTGUIDE, 26
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 132
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDP_SOCKETS_INIT_FAILED "Windows sockets initialization failed."
+    IDS_STRING_SB_NAME      "WinMTR v1.0.0"
+    IDS_STRING_SB_PING      "0000000"
+    IDS_STRING_CLEAR_HISTORY "Clear History"
+END
+
+#endif    // 英语(美国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
